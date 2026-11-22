@@ -7,6 +7,11 @@ data "aws_ami" "web-ami" {
     values = var.ami_name
   }
 }
+
+data "aws_subnet" "selected-subnet" {
+  id = var.subnet_id
+}
+
 resource "aws_instance" "webserver" {
     ami = data.aws_ami.web-ami.id
     vpc_security_group_ids = [ aws_security_group.global-sg-2026.id ]

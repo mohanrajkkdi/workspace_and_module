@@ -4,6 +4,6 @@ module "instance_provisioning" {
   sgname = var.sgname
   cidr = var.cidr
   mytag = var.mytag
-  amiid = var.amiid
   keyname = var.keyname
+  ami_name = var.ami_name
 }

@@ -11,3 +11,5 @@ variable "machinetype" {}
 variable "keyname" {}
 
 variable "ami_name" {}
+
+variable "subnet_id" {}
